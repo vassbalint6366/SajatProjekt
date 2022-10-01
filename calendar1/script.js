@@ -1,19 +1,17 @@
 const date = new Date(); //mai datum
 
-const renderCalendar = () => {
+const renderCalendar = () => { //Function
+
+    
 
     date.setDate(1);
 
     const monthDays = document.querySelector('.days');
-    
     const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
-    
     const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-    
-    const firstDayIndex = date.getDay();
-    
     const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
     
+    const firstDayIndex = date.getDay();
     const nextDays = 7 - lastDayIndex -1;
     
     const months = [
@@ -31,11 +29,9 @@ const renderCalendar = () => {
         "December",
     ];
     
-    document.querySelector('.date h1').innerHTML =
-        date.getFullYear() + ", " + months[date.getMonth()];
+    document.querySelector('.date h1').innerHTML = date.getFullYear() + ", " + months[date.getMonth()];
     
-    document.querySelector('.date p').innerHTML =
-        "Mai dátum: " + new Date().toLocaleDateString();
+    document.querySelector('.date p').innerHTML = "Mai dátum: " + new Date().toLocaleDateString();
     
     let days = "";
     
@@ -58,16 +54,19 @@ const renderCalendar = () => {
     for(let j = 1; j <= nextDays; j++) {
         days += `<div class="next-date">${j}</div>`;
     }
+
     monthDays.innerHTML = days;
 }
 
 
-document.querySelector('.prev').addEventListener('click',() => {
+document.querySelector('.prev').addEventListener
+('click',() => {
     date.setMonth(date.getMonth()-1);
     renderCalendar();
 })
 
-document.querySelector('.next').addEventListener('click',() => {
+document.querySelector('.next').addEventListener
+('click',() => {
     date.setMonth(date.getMonth()+1);
     renderCalendar();
 })
