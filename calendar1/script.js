@@ -17,26 +17,25 @@ const renderCalendar = () => {
     const nextDays = 7 - lastDayIndex -1;
     
     const months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
+        "Január",
+        "Február",
+        "Március",
+        "Április",
+        "Május",
+        "Június",
+        "Július",
+        "Augusztus",
+        "Szeptember",
+        "Október",
         "November",
         "December",
     ];
     
     document.querySelector('.date h1').innerHTML =
-        months[date.getMonth()] + " " + 
-        date.getFullYear();
+        date.getFullYear() + ", " + months[date.getMonth()];
     
     document.querySelector('.date p').innerHTML =
-        new Date().toDateString();
+        "Mai dátum: " + new Date().toLocaleDateString();
     
     let days = "";
     
