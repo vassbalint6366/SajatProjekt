@@ -9,14 +9,25 @@ html {
     font-size: 62.5%;
 }
 
-.container {
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.containerCenter {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-color: #12121F;
     color: #eeeeee;
     display: flex;
     justify-content: center; /* horizontal */
     align-items: center; /* vertical */
+    /*
+    flex-wrap: wrap;
+    flex-direction: column;
+    */
 }
 
 .calendar {
@@ -108,3 +119,61 @@ html {
     background-color: #167E56;
 }
 
+.eventsLeft {
+    margin-right: 5rem;
+    width: 40rem;
+    height: 60rem;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.eventsLeftComment {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    display: flex;
+}
+
+.eventsRight {
+    margin-left: 5rem;
+    width: 40rem;
+    height: 60rem;
+    background-color: #222227;
+    box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.eventsRightComment {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    display: flex;
+}
+
+.hours {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: block;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    font-size: 1.5rem;
+}
+
+.hours div {
+    padding: 1rem 0;
+    border-top: 0.2rem solid black;
+}
