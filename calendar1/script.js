@@ -4,7 +4,7 @@ const renderCalendar = () => { //Function
 
     
 
-    date.setDate(1);
+    date.setDate(7);
 
     const monthDays = document.querySelector('.days');
     const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
